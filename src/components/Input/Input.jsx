@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
-
 import { MdAddTask } from "react-icons/md";
 import Note from "../Notes/Notes";
+import Navbar from "../NavBar/Navbar";
 
 const Input = () => {
   const [notes, setNotes] = useState(() => {
@@ -17,6 +17,8 @@ const Input = () => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  //
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     try {
@@ -63,8 +65,23 @@ const Input = () => {
     }
   };
 
+  ////// extra Feature Added
+
+  const handleSearch = () => {
+    return notes.filter(
+      (note) =>
+        note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        note.content.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  };
+  ////////////////////////
+
   return (
     <>
+      <Navbar
+        handleSearch={(value) => setSearchTerm(value)}
+        searchTerm={searchTerm}
+      />
       <div>
         <form>
           {
@@ -91,25 +108,36 @@ const Input = () => {
           </button>
         </form>
       </div>
+
+      {/* / New update feature list / */}
+
       <>
-        {notes.length > 0 ? (
+      {notes.length > 0 ? (
           <>
-            {notes
-              .map((note) => {
-                return (
+            {searchTerm
+              ? handleSearch().map((note) => (
                   <Note
                     {...note}
                     key={note.id}
                     handleDelete={handleDelete}
                     handleUpdateText={handleUpdateText}
                   />
-                );
-              })
-              .reverse()}
+                ))
+              : notes
+                  .map((note) => (
+                    <Note
+                      {...note}
+                      key={note.id}
+                      handleDelete={handleDelete}
+                      handleUpdateText={handleUpdateText}
+                    />
+                  ))
+                  .reverse()}
           </>
         ) : (
           <p style={{ textAlign: "center" }}>Nothing to Keep</p>
         )}
+    
       </>
     </>
   );
