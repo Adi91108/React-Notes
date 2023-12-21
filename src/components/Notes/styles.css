@@ -1,0 +1,88 @@
+.note {
+    /* background: #ffffff; */
+    width: 240px;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgb(175, 175, 175);
+    padding: 10px;
+    margin: 2rem;
+    float: left;
+    margin-right: 0;
+    /* margin-left: 0; */
+}
+
+.note h1 {
+      color: #070707;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .note p {
+    font-size: 1rem;
+    color: #070707;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .note button {
+    position: relative;
+    float: right;
+    color: #1B1C1E;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    margin: 0.2rem;
+    
+  }
+
+  .form-input {
+    width: 90%;
+    height: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 4px 10px;
+    /* margin-bottom: 20px; */
+    outline: none;
+    font-weight: 700;
+    font-size: 1rem;
+    resize: none;
+    overflow-y: hidden;
+    cursor: pointer;
+  }
+  .form-textarea {
+    width: 90%;
+    height: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 4px 10px;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+    cursor: pointer;
+    overflow-y: hidden;
+  }
+
+  @media only screen and (min-width: 320px)  {
+    .note {
+        display: inline;
+        margin-inline-start: 0.7rem;
+      width: 17.25rem;
+    }
+  }
+  @media only screen and (max-width:375px) and  (min-width: 321px)  {
+    .note {
+        display: inline;
+        margin-inline-start: 0.9rem;
+      width: 20.25rem;
+    }
+  }
+  @media only screen and (max-width:475px) and  (min-width: 376px)  {
+    .note {
+        display: inline;
+        margin-inline-start: 0.9rem;
+      width: 23.25rem;
+    }
+  }
+  
