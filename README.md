@@ -66,7 +66,7 @@ To get started with this project, clone the repository and follow the local deve
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone <https://github.com/Adi91108/React-Notes/tree/main>
 
 # Change directory
 cd react-notes
