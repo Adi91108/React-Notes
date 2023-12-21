@@ -1,7 +1,6 @@
 # React Google Keep Clone
 
-This project is a simplified version of Google Keep, a note-taking application, built using React. In this i have achived all the required functionality and use simple components
-i have 2 route 1st to make by using Usecontext hook 2nd by just using passing props and i select 2nd not to over do things and keep it simple.
+This project is a simplified version of Google Keep, a note-taking application, built using React. In this I have achieved all the required functionality and use simple components. I have 2 routes 1st to make by using Usecontext hook 2nd by just using passing props and i select 2nd not to over do things and keep it simple.
 
 ## Objective
 
